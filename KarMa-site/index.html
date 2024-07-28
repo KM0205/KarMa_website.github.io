@@ -1,75 +1,78 @@
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karim`s_room</title>
-    <style>
-        
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            background-color: #D2D2D2;
-            background-image:
-            repeating-linear-gradient(
-                to right, transparent 0 100px,
-                #25283b22 100px 101px
-            ),
-            repeating-linear-gradient(
-                to bottom, transparent 0 100px,
-                #25283b22 100px 101px
-            );
-        }
-        
-        body::before{
-            position: absolute;
-            width: min(1400px, 90vw);
-            top: 10%;
-            left: 50%;
-            height: 90%;
-            transform: translateX(-50%);
-            content: '';
-            background-image: url(../KarMa-site/img/Karim`s_room/Webp/bg.webp);
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-position: top center;
-            pointer-events: none;
-        }
-    </style>
-    <link rel="stylesheet" href="../KarMa-site/CSS/Karim-style.css">
+    
+    <title>KarMa</title>
+
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+
+    <link rel="stylesheet" href="CSS/KarMa-style.css">
+    <script src="js/app.js" defer></script>
+
 </head>
 <body>
-
-    <div class="banner">
-        <div class="slider" style="--quantity: 10">
-            <div class="item" style="--position: 1"><img src="img/Karim`s_room/Webp/dragon_1.webp" alt="Hero"></div>
-            <div class="item" style="--position: 2"><img src="img/Karim`s_room/Webp/dragon_2.webp" alt="House_Karim"></div>
-            <div class="item" style="--position: 3"><img src="img/Karim`s_room/Webp/dragon_3.webp" alt="Robot_Karim"></div>
-            <div class="item" style="--position: 4"><img src="img/Karim`s_room/Webp/dragon_4.webp" alt="Shark_Karim"></div>
-            <div class="item" style="--position: 5"><img src="img/Karim`s_room/Webp/dragon_5.webp" alt="Shark_2_Karim"></div>
-            <div class="item" style="--position: 6"><img src="img/Karim`s_room/Webp/dragon_6.webp" alt="Robot_Karim"></div>
-            <div class="item" style="--position: 7"><img src="img/Karim`s_room/Webp/dragon_7.webp" alt="House_Karim"></div>
-            <div class="item" style="--position: 8"><img src="img/Karim`s_room/Webp/dragon_8.webp" alt="Hero"></div>
-            <div class="item" style="--position: 9"><img src="img/Karim`s_room/Webp/dragon_9.webp" alt="Robot_Malika"></div>
-            <div class="item" style="--position: 10"><img src="img/Karim`s_room/Webp/dragon_10.webp" alt="House_Malika"></div>
-        </div>
+    <div class="wrapper">
         <div class="content">
-            <h1 data-content="KarMa">
-                KarMa
-            </h1>
-            <div class="author">
-                <h2>Karim & Malika</h2>
-                <p><b>Karim`s room</b></p>
-                <p>
-                    The best works of Bagautdinov Karim
-                </p>
+            <header class="hero-section">
+                <!-- Для движения картинка с отставанием (лагом) <img data-lag=".5" data-speed=".6" class="hero" src="img/hero.png" alt="Hero"> -->
+                <!-- <img data-speed=".6" class="hero" src="img/hero.png" alt="Hero"> -->
+                <img data-speed=".6" class="hero" src="img/WebP/hero_2_KarMa-_2_.webp" alt="Hero">
+                <div class="conteiner">
+                    <div data-speed=".7" class="main-header">
+                        <h1 class="main-title">Karim <p align="center">&</p> Malika</h1>
+                    </div>
+                </div>
+            </header>
+        
+            <div class="portfolio">
+                <div class="container">
+                    <main class="gallery">
+                        <div data-speed=".9" class="gallery__left">
+                            
+                            <a href="../KarMa-site/Karim's_room.html">
+                                <img class="gallery__item" src="img/WebP/House_Karim.webp" alt="House_Karim">
+                            </a>
+                            <a href="../KarMa-site/Karim's_room.html">
+                                <img class="gallery__item" src="img/WebP/Robot_Karim.webp" alt="Robot_Karim">
+                            </a>   
+                                
+                            <div class="text-block gallery__item">
+                                <h2 class="text-block__h">Что такое: no enter - no escape?</h2>
+                                <p class="text-block__p">Сломанная клавиатура!</p>
+                            </div>
+                            
+                            <a href="../KarMa-site/Karim's_room.html">
+                                <img class="gallery__item" src="img/WebP/Shark_Karim.webp" alt="Shark_Karim">
+                            </a>
+
+                        </div>
+                        <div data-speed="1.1" class="gallery__right">
+                            
+                            <div class="text-block gallery__item">
+                                <h2 class="text-block__h">СРОЧНО ПРОДАМ!!!</h2>
+                                <p class="text-block__p">"мышь" в отличном состоянии, со всеми наворотами, пробег-5000 км!</p>
+                            </div>
+                            <img class="gallery__item" src="img/WebP/Robot_Malika.webp" alt="Robot_Malika">
+                            <img class="gallery__item" src="img/WebP/House_Malika.webp" alt="House_Malika">
+                            <a href="../KarMa-site/Karim's_room.html">
+                                <img class="gallery__item" src="img/WebP/Shark_2_Karim.webp" alt="Shark_2_Karim">
+                            </a>
+
+                        </div>
+                    </main>
+                </div>
             </div>
-            <div class="model"></div>
         </div>
     </div>
     
+
+    <!-- <audio controls loop>
+        <source src="img/repchik-m-4.mp3" type="audio/mpeg">
+    </audio> -->
+
 </body>
 </html>
